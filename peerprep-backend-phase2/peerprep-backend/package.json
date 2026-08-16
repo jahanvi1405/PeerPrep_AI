@@ -1,0 +1,59 @@
+{
+  "name": "peerprep-ai-backend",
+  "version": "1.0.0",
+  "description": "PeerPrep AI — production backend. Peer skill-swap, mentor matching, sessions, AI mock interviews and feedback, and readiness analytics.",
+  "type": "module",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "seed": "node src/seed/index.js",
+    "lint": "eslint \"src/**/*.js\"",
+    "lint:fix": "eslint \"src/**/*.js\" --fix",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "cross-env NODE_ENV=test jest --runInBand",
+    "test:watch": "cross-env NODE_ENV=test jest --runInBand --watch"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1",
+    "dotenv": "^16.4.5",
+    "bcrypt": "^5.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.4.0",
+    "express-mongo-sanitize": "^2.2.0",
+    "xss": "^1.0.15",
+    "hpp": "^0.2.3",
+    "joi": "^17.13.3",
+    "morgan": "^1.10.0",
+    "winston": "^3.13.1",
+    "cloudinary": "^2.4.0",
+    "multer": "^1.4.5-lts.1",
+    "streamifier": "^0.1.1",
+    "nodemailer": "^6.9.14",
+    "@google/generative-ai": "^0.17.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "uuid": "^10.0.0",
+    "compression": "^1.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "^3.3.3",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "mongodb-memory-server": "^9.4.1",
+    "cross-env": "^7.0.3"
+  }
+}
