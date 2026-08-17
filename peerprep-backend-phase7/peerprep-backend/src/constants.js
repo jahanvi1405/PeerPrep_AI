@@ -49,6 +49,15 @@ export const UPLOAD_TYPE = {
   RESUME: 'resume',
 };
 
+// Shared by Profile.experienceLevel and UserSkill.level (Phase 8) — one
+// canonical set of levels rather than two schemas each defining their own
+// copy of the same three strings.
+export const PROFICIENCY_LEVELS = {
+  BEGINNER: 'BEGINNER',
+  INTERMEDIATE: 'INTERMEDIATE',
+  ADVANCED: 'ADVANCED',
+};
+
 export const HTTP_STATUS = {
   OK: 200,
   CREATED: 201,
@@ -76,6 +85,7 @@ export default {
   INTERVIEW_TYPE,
   AI_CHAT_MODE,
   UPLOAD_TYPE,
+  PROFICIENCY_LEVELS,
   HTTP_STATUS,
   COOKIE_NAMES,
 };
