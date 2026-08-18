@@ -71,7 +71,7 @@ This backend is being built module-by-module against the System Design Document.
 - [x] Phase 6 — Utilities (utils/appError.js, utils/catchAsync.js, utils/token.js)
 - [x] Phase 7 — Authentication (User.js, RefreshToken.js models; authService.js; authController.js; authRoutes.js; middlewares/auth.js + authorize.js; config/passport.js — JWT access+refresh with type-checked payloads, jti, refresh-token rotation via SHA-256-hashed persistence, bcrypt password hashing in the service layer, Google OAuth via Passport, role-based authorization)
 - [x] Phase 8 — User Profile & Skills (models/Profile.js, Skill.js, UserSkill.js; services/profileService.js, skillService.js; controllers/profileController.js, skillController.js; routes/profileRoutes.js, skillRoutes.js; seed/index.js — profile CRUD, public skill catalog, per-user skill attach/update/remove with ownership enforced via req.user)
-- [ ] Phase 9 — Skills module
+- [x] Phase 9 — Interview Sessions & Scheduling (models/Session.js; services/sessionService.js; controllers/sessionController.js; routes/sessionRoutes.js — 5-state session lifecycle enforced via atomic status-filtered updates, host/participant ownership, host-vs-participant confirm asymmetry)
 - [ ] Phase 10 — Mentor matching
 - [ ] Phase 11 — Sessions
 - [ ] Phase 12 — Reviews

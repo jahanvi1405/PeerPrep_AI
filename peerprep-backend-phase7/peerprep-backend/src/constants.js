@@ -21,15 +21,22 @@ export const AUTH_PROVIDERS = {
   GOOGLE: 'google',
 };
 
+// Interview-session lifecycle (Phase 9). Note: this replaces an earlier
+// placeholder value set from Phase 1 scaffolding that was never actually
+// used anywhere in the codebase (verified — zero imports/references
+// existed for the old shape) and didn't match the state machine Phase 9
+// actually requires. No functional code depended on the old values.
 export const SESSION_STATUS = {
-  PENDING: 'pending',
-  ACCEPTED: 'accepted',
-  SCHEDULED: 'scheduled',
-  COMPLETED: 'completed',
-  CANCELLED: 'cancelled',
-  REJECTED: 'rejected',
-  NO_SHOW: 'no_show',
-  REVIEWED: 'reviewed',
+  SCHEDULED: 'SCHEDULED',
+  CONFIRMED: 'CONFIRMED',
+  IN_PROGRESS: 'IN_PROGRESS',
+  COMPLETED: 'COMPLETED',
+  CANCELLED: 'CANCELLED',
+};
+
+export const SESSION_DURATION_MINUTES = {
+  MIN: 15,
+  MAX: 180,
 };
 
 export const INTERVIEW_TYPE = {
@@ -82,6 +89,7 @@ export default {
   USER_ROLES,
   AUTH_PROVIDERS,
   SESSION_STATUS,
+  SESSION_DURATION_MINUTES,
   INTERVIEW_TYPE,
   AI_CHAT_MODE,
   UPLOAD_TYPE,
